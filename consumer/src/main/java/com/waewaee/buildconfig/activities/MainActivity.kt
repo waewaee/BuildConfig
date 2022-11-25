@@ -24,9 +24,15 @@ class MainActivity : AppCompatActivity(), MainView {
         setContentView(R.layout.activity_main)
 
         setUpPresenter()
+        setUpToolbar()
         setUpRecyclerView()
 
         mPresenter.onUiReady()
+    }
+
+    private fun setUpToolbar() {
+        setSupportActionBar(toolbar)
+        supportActionBar?.title = "Welcome to ${getString(R.string.app_name)}"
     }
 
     private fun setUpRecyclerView() {
