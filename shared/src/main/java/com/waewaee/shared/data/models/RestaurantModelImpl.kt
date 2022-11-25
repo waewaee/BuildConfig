@@ -10,10 +10,10 @@ object RestaurantModelImpl: RestaurantModel, BaseModel() {
         onSuccess: (List<RestaurantVO>) -> Unit,
         onFailure: (String) -> Unit
     ) {
-        mRestaurantApi.getRestaurants()
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe({
+        mRestaurantApi?.getRestaurants()
+            ?.subscribeOn(Schedulers.io())
+            ?.observeOn(AndroidSchedulers.mainThread())
+            ?.subscribe({
                 onSuccess(it.data ?: listOf())
             }, {
                 onFailure(it.localizedMessage ?: "No Internet Connection")
