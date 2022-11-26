@@ -18,8 +18,12 @@ class MainPresenterImpl: MainPresenter, ViewModel() {
 
     override fun onUiReady() {
         mRestaurantModel.getRestaurants(
-            onSuccess = { mView?.showRestaurants(it) },
-            onFailure = { mView?.showError(it) }
+            onSuccess = {
+                mView?.showRestaurants(it)
+                        },
+            onFailure = {
+                mView?.showError(it)
+            }
         )
     }
 }
