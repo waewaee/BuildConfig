@@ -1,4 +1,4 @@
-package com.waewaee.rider
+package com.waewaee.rider.notification
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -7,6 +7,8 @@ import android.app.PendingIntent
 import android.content.Context
 import android.os.Build
 import androidx.core.app.NotificationCompat
+import com.waewaee.rider.BuildConfig
+import com.waewaee.rider.R
 
 fun sendNotification(context: Context, body: String, title: String, pendingIntent: PendingIntent) {
 
