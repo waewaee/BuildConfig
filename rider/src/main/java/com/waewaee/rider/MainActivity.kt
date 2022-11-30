@@ -10,5 +10,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         showSnackBar("This is rider app!")
+
+        sendNotification(this, "Your rider is nearby", "Rider Noti")
     }
 }
