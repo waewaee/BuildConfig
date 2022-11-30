@@ -18,8 +18,8 @@ class FCMService: FirebaseMessagingService() {
 
         sendNotification(
             context = this,
-            title = message.notification?.title ?: "",
-            body = message.notification?.body ?: "",
+            title = message.data["title"] ?: "",
+            body = message.data["body"] ?: "",
             pendingIntent = PendingIntent.getActivity(
                 this,
                 0,
